@@ -1,1 +1,269 @@
-/* Insert your styles here */
+
+/*
+$dark-green=#2C3531;
+$medium-green=#116466;
+$dark-pink=#D9B08C;
+$light-pink=#FFCB9A;
+$light-green=#D1E8E2;
+*/
+* {box-sizing: border-box}
+html,
+body
+{
+	font-family: 'Concert One', cursive;
+	scroll-behavior: smooth;
+	margin:0;
+	color: #116466;
+	background: url(../../media/backgroundtile.png);
+}
+nav{
+	z-index:9999;
+	font-size:14px;
+	background-color: #116466;
+	
+}
+#nav-wrapper{
+	height:45px;
+
+}
+#navbar{
+	text-align:center;
+
+}
+ul {
+	display: inline-block;
+	list-style: none;
+	padding:0px;
+}
+li {
+	display:inline;
+}
+li a{
+	list-style: none;
+	padding:14px 16px;
+	text-decoration: none;
+	color:white;
+}
+li a:hover:not(.active) {
+	background-color: #FFCB9A;
+	color:#2C3531;
+	transition: all ease 0.5s;
+}
+.active {
+	background:#FFCB9A;
+	
+	color:#2C3531;
+	transition: all ease 0.5s;
+}
+.logo {
+	padding: 5px;
+	display:block;
+	text-align:center;
+	background:white;
+}
+#logo{
+	width: 150px;
+    position: absolute;
+    top: 8px;
+    left: 33px;
+    opacity: 0;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: -1px 3px 4px 1px #00000075;
+}
+
+
+#logo{
+
+transition: opacity 0.2s ease-in;
+
+}
+
+.sticky + .content {
+  padding-top: 110px;
+}
+#home{
+padding-top:0px;
+}
+section{
+
+}
+
+
+
+
+
+
+
+
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+
+
+.slideshow-container {
+	
+max-width: 100%;
+max-height: 48vw;
+position: relative;
+margin: auto;
+overflow:hidden;
+z-index:0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color:#2c3531ba;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.slidetext{
+	 line-height: 1.6;
+	font-size: 1vw;
+	text-align:center;
+    color: white;
+    display: flex;
+    width: 70%;
+    height: 16vw;
+    background: #2c3531ba;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+	padding: 1vw;
+ 
+}
+
+.slidetext h2{
+	 color: #FFCB9A;
+		
+	    font-size: 2vw;
+		margin:10px;
+}
+
+.button {
+  
+  
+	
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+   margin: 1vw 2px 22px 2px;
+  cursor: pointer;
+   outline: 3px solid #FFCB9A;
+    outline-offset: -4px;
+    transition: all ease 0.5s;
+}
+.button:hover {
+background:#FFCB9A;
+outline: 3px solid #FFCB9A;
+outline-offset: 0px;
+color:#2C3531;
+transition:all 0.5s;
+
+}
+
+
+#about{
+background: url(../media/backgroundtile.png);
+min-height:100vh;
+
+}
+#pricing{
+background: white;
+height: 48vw;
+}
+
+
+
+
+@media screen and (max-width: 946px) {
+#logo{
+	display:none;
+}
+#nav-wrapper{
+	background-color: #116466;
+	
+}
+#logo{
+	
+	left:10px;
+}
+
+}
+@media screen and (max-width: 767px) {
+#logo{
+	display:none;
+}
+#navbar{
+	
+	text-align:center;
+}
+}
+@media screen and (max-width: 479px) {
+li{
+	display:block;
+}
+#navbar{
+	
+	display:none;
+}
+}
+
+
