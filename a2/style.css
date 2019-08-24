@@ -20,15 +20,16 @@ nav{
 	z-index:9999;
 	font-size:14px;
 	background-color: #116466;
-	
 }
 #nav-wrapper{
-	height:45px;
-
+	height:44px;
 }
 #navbar{
 	text-align:center;
-
+	width: 100%;
+}
+#mobnav{
+	display:none;
 }
 ul {
 	display: inline-block;
@@ -44,14 +45,15 @@ li a{
 	text-decoration: none;
 	color:white;
 }
-li a:hover:not(.active) {
+li a:hover {
 	background-color: #FFCB9A;
+	box-shadow: -1px 1px 4px 1px #00000075;
 	color:#2C3531;
 	transition: all ease 0.5s;
 }
 .active {
 	background:#FFCB9A;
-	
+	box-shadow: -1px 1px 4px 1px #00000075;
 	color:#2C3531;
 	transition: all ease 0.5s;
 }
@@ -75,84 +77,57 @@ li a:hover:not(.active) {
   box-shadow: -1px 3px 4px 1px #00000075;
 }
 
-
 #logo{
-
 transition: opacity 0.2s ease-in;
-
 }
 
 .sticky + .content {
   padding-top: 110px;
 }
-#home{
-padding-top:0px;
+
+
+
+.mySlides {
+	display: none
 }
-section{
-
+img {
+	vertical-align: middle;
 }
-
-
-
-
-
-
-
-
-
-
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-
-
 .slideshow-container {
-	
-max-width: 100%;
-max-height: 48vw;
-position: relative;
-margin: auto;
-overflow:hidden;
-z-index:0;
+	max-width: 100%;
+	max-height: 48vw;
+	position: relative;
+	margin: auto;
+	overflow:hidden;
+	z-index:0;
 }
-
-/* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color:#2c3531ba;
-
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	background-color:#2c3531ba;
 }
-
-/* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
 }
-
-
-/* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -164,12 +139,6 @@ z-index:0;
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
 .slidetext{
 	 line-height: 1.6;
 	font-size: 1vw;
@@ -184,53 +153,55 @@ z-index:0;
     top: 35%;
     left: 15%;
 	padding: 1vw;
- 
 }
 
 .slidetext h2{
-	 color: #FFCB9A;
-		
-	    font-size: 2vw;
-		margin:10px;
+	color: #FFCB9A;
+    font-size: 2vw;
+	margin:10px;
 }
-
 .button {
-  
-  
-	
-  color: white;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1vw;
-   margin: 1vw 2px 22px 2px;
-  cursor: pointer;
-   outline: 3px solid #FFCB9A;
-    outline-offset: -4px;
-    transition: all ease 0.5s;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1vw;
+	margin: 1vw 2px 22px 2px;
+	cursor: pointer;
+	outline: 3px solid #FFCB9A;
+	outline-offset: -4px;
+	transition: all ease 0.5s;
 }
 .button:hover {
-background:#FFCB9A;
-outline: 3px solid #FFCB9A;
-outline-offset: 0px;
-color:#2C3531;
-transition:all 0.5s;
+	background:#FFCB9A;
+	outline: 3px solid #FFCB9A;
+	outline-offset: 0px;
+	color:#2C3531;
+	transition:all 0.5s;
 
 }
 
-
+#home{
+padding-top:0px;
+max-height: 48vw;
+}
 #about{
 background: url(../media/backgroundtile.png);
 min-height:100vh;
-
 }
 #pricing{
 background: white;
 height: 48vw;
 }
-
-
+#now-showing{
+background: white;
+min-height: 48vw;
+}
+#synopsis{
+background: white;
+min-height: 48vw;
+}
 
 
 @media screen and (max-width: 946px) {
@@ -239,10 +210,9 @@ height: 48vw;
 }
 #nav-wrapper{
 	background-color: #116466;
-	
+
 }
 #logo{
-	
 	left:10px;
 }
 
@@ -252,18 +222,56 @@ height: 48vw;
 	display:none;
 }
 #navbar{
-	
 	text-align:center;
 }
 }
+
+
 @media screen and (max-width: 479px) {
-li{
-	display:block;
-}
-#navbar{
+	li{
+		display:block;
+		margin: 0;
+		padding: 10px;
+	}
+	li a {
+		padding: 3px 50px;
+	}
+	ul{
+		margin:0;
+		width:100%;
+	}
+	#navbar{
+
+	}
+	#mobnav{
+		display:block;
+	}
 	
+	#mobilenavi{
 	display:none;
+	z-index: 50;
+   
+    position: sticky;
+    background: #116466;
+	}
+	.slidetext{
+		height: 75px;
+		
+	}
+	.slidetext p{
+		display: none;
+	}
+	.button {
+	  
+		font-size: 8px;
+		margin: 1px;
+	   
+	}
+	.slidetext h2 {
+		font-size: 17px;
+		margin: 3px;
+	}
+	.prev, .next{
+		font-size: 11px
+	}
 }
-}
-
-

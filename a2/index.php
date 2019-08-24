@@ -25,12 +25,15 @@
 		
       <ul>
 		<div><a href="#"><img src="../../media/lunardo-Logo.png"  id='logo'alt="Logo img"></a> </div>
-		<li><a id="nav-id1" class="active" href="#home">HOME</a></li>
-		<li><a id="nav-id2" href="#about">ABOUT US</a></li>
-		<li><a id="nav-id3" href="#pricing">PRICING</a></li>
-		<li><a id="nav-id4" href="#now-showing">NOW SHOWING</a></li>
-		<li><a id="nav-id5" href="#synopsis ">SYNOPSIS</a></li>
-		
+			<li><a id="mobnav"  href="javascript:void(0);">&#9776;</a></li>
+		<div id="mobilenavi">	
+			
+			<li><a id="nav-id1" class="active" href="#home">HOME</a></li>
+			<li><a id="nav-id2" href="#about">ABOUT US</a></li>
+			<li><a id="nav-id3" href="#pricing">PRICING</a></li>
+			<li><a id="nav-id4" href="#now-showing">NOW SHOWING</a></li>
+			<li><a id="nav-id5" href="#synopsis ">SYNOPSIS</a></li>
+		</div>
 	</ul>
     </nav>
 	</div>
@@ -103,7 +106,8 @@
      </section>
 	 
 	<section id='about'>
-        
+        <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+
      </section>
 	<section id='pricing'>
          <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
@@ -113,8 +117,10 @@
      </section>
 	<section id='synopsis'>
          <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-		          <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-		          <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
 		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
      </section>
     </main>
@@ -129,6 +135,21 @@
 
   </body>
 	<script>
+	
+	document.getElementById("mobnav").onclick = function() {navShow()};
+	
+	function navShow() {
+		var nav = document.getElementById("mobilenavi");
+		
+		if(nav.style.display=="none"){
+			nav.style.display = "block";
+		}else{
+			nav.style.display = "none";
+		}
+	
+	
+	}
+	
 	window.onscroll = function() {myFunction()};
 
 	
@@ -151,7 +172,6 @@
 	var h = window.innerHeight;
 
 	function myFunction() {
-		
 		
 		
 		if (window.pageYOffset >= stickym) {
