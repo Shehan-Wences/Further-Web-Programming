@@ -16,7 +16,7 @@
   </head>
 
   <body>
-
+	
     <header>
       <div class="logo"><a href="#"><img src="../../media/lunardo-Logo1.png" style="width:200px"alt="Logo img"></a> </div>
     </header>
@@ -32,7 +32,7 @@
 			<li><a id="nav-id2" href="#about">ABOUT US</a></li>
 			<li><a id="nav-id3" href="#pricing">PRICING</a></li>
 			<li><a id="nav-id4" href="#now-showing">NOW SHOWING</a></li>
-			<li><a id="nav-id5" href="#synopsis ">SYNOPSIS</a></li>
+			
 		</div>
 	</ul>
     </nav>
@@ -41,62 +41,62 @@
 		
       <section id='home'>
 		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <div class="slidetext">
+				  <div>
+				  <h2> THE HAPPY PRINCE </h2>
+				  <p>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic 
+				  distance and regards the difficulties that beset his life with detachment and humor.</p>
+				  <a href="#" class="button">NOW PLAYING</a>
+				  </div>
+			  </div>		  
+			  <img src="../../media/1.jpg"  >
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="slidetext">
+				  <div>
+				  <h2> AVENGERS ENDGAME </h2>
+				  <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.
+				  With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+				  <a href="#" class="button">NOW PLAYING</a>
+				  </div>
+			  </div>
+			  <img src="../../media/4.jpg" >
+			</div>
 
-		<div class="mySlides fade">
-		  <div class="slidetext">
-			  <div>
-			  <h2> THE HAPPY PRINCE </h2>
-			  <p>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic 
-			  distance and regards the difficulties that beset his life with detachment and humor.</p>
-			  <a href="#" class="button">NOW PLAYING</a>
-			  </div>
-		  </div>		  
-		  <img src="../../media/4.jpg"  style="width:100%">
-		</div>
-		<div class="mySlides fade">
-		  <div class="slidetext">
-			  <div>
-			  <h2> AVENGERS ENDGAME </h2>
-			  <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.
-			  With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
-			  <a href="#" class="button">NOW PLAYING</a>
-			  </div>
-		  </div>
-		  <img src="../../media/1.jpg" style="width:100%">
-		</div>
+			<div class="mySlides fade">
+			  <div class="slidetext">
+				  <div>
+				  <h2> THE LION KING </h2>
+				  <p>After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.</p>
+				  <a href="#" class="button">NOW PLAYING</a>
+				  </div>
+			  </div>		  
+			  <img src="../../media/2.jpg" >
+			</div>
 
-		<div class="mySlides fade">
-		  <div class="slidetext">
-			  <div>
-			  <h2> THE LION KING </h2>
-			  <p>After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.</p>
-			  <a href="#" class="button">NOW PLAYING</a>
+			<div class="mySlides fade">
+			  <div class="slidetext">
+				  <div>
+				  <h2> DUMBO </h2>
+				  <p>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, 
+				  Dumbo and his friends discover dark secrets beneath its shiny veneer.</p>
+				  <a href="#" class="button">NOW PLAYING</a>
+				  </div>
 			  </div>
-		  </div>		  
-		  <img src="../../media/2.jpg" style="width:100%">
-		</div>
-
-		<div class="mySlides fade">
-		  <div class="slidetext">
-			  <div>
-			  <h2> DUMBO </h2>
-			  <p>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, 
-			  Dumbo and his friends discover dark secrets beneath its shiny veneer.</p>
-			  <a href="#" class="button">NOW PLAYING</a>
-			  </div>
-		  </div>
-		  <img src="../../media/3.jpg"  style="width:100%">
-		</div>
+			  <img src="../../media/3.jpg" >
+			</div>
 		
 		
 
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		
-		<br>
-		
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--
+		-->	
+		<!--
 		</div>
-	<!--	<div style="text-align:center">
+		<div style="text-align:center">
 				  <span class="dot" onclick="currentSlide(1)"></span> 
 				  <span class="dot" onclick="currentSlide(2)"></span> 
 				  <span class="dot" onclick="currentSlide(3)"></span> 
@@ -106,23 +106,15 @@
      </section>
 	 
 	<section id='about'>
-        <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-
+        
      </section>
 	<section id='pricing'>
-         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+     
      </section>
 	<section id='now-showing'>
-         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
+     <!--    <img src="../../media/website-under-construction.png" alt='Website Under Construction' />-->	
      </section>
-	<section id='synopsis'>
-         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-         <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-		 <img src="../../media/website-under-construction.png" alt='Website Under Construction' />
-     </section>
+	
     </main>
 
     <footer>
@@ -132,7 +124,7 @@
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
-
+	<button onclick="topFunction()" id="goTO" title="Go to top">&#8593;</button>
   </body>
 	<script>
 	
@@ -149,7 +141,10 @@
 	
 	
 	}
-	
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
 	window.onscroll = function() {myFunction()};
 
 	
@@ -166,9 +161,6 @@
 	var now = document.getElementById("now-showing").offsetTop;
 	var nowsize = document.getElementById("now-showing").offsetHeight;
 	
-	var synopsis = document.getElementById("synopsis").offsetTop;
-	var synopsissize = document.getElementById("synopsis").offsetHeight;
-	
 	var h = window.innerHeight;
 
 	function myFunction() {
@@ -177,42 +169,44 @@
 		if (window.pageYOffset >= stickym) {
 		document.getElementById("navbar").classList.add("sticky");
 		document.getElementById("logo").style.opacity = "1";
+		document.getElementById("goTO").style.display = "block";
 		
 		} else {
 		document.getElementById("navbar").classList.remove("sticky");
 		document.getElementById("logo").style.opacity = "0";
+		document.getElementById("goTO").style.display = "none";
 		
 		}
 		
-		if (window.pageYOffset >= home-200 && window.pageYOffset < home+h+homesize-65) {
+		if (window.pageYOffset >= home-200 && window.pageYOffset < home+homesize-65) {
 		document.getElementById("nav-id1").classList.add("active");
+		document.getElementById("mobnav").innerHTML = "&#9776;";
 		}else{
 		document.getElementById("nav-id1").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= about+h-65 && window.pageYOffset < about+h+aboutsize-65 ) {
+		if (window.pageYOffset >= about-65 && window.pageYOffset < about+aboutsize-65 ) {
 		document.getElementById("nav-id2").classList.add("active");
+		document.getElementById("mobnav").innerHTML = "ABOUT";
 		}else{
 		document.getElementById("nav-id2").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= pricing+h-65 && window.pageYOffset < pricing+h+pricingsize-65 ) {
+		if (window.pageYOffset >= pricing-65 && window.pageYOffset < pricing+pricingsize-65 ) {
 		document.getElementById("nav-id3").classList.add("active");
+		document.getElementById("mobnav").innerHTML = "PRICING";
 		}else{
 		document.getElementById("nav-id3").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= now+h-65 && window.pageYOffset < now+h+nowsize-65 ) {
+		if (window.pageYOffset >= now-65 && window.pageYOffset < now+nowsize-65 ) {
 		document.getElementById("nav-id4").classList.add("active");
+		document.getElementById("mobnav").innerHTML = "NOW SHOWING";
 		}else{
 		document.getElementById("nav-id4").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= synopsis+h-65 && window.pageYOffset < synopsis+h+synopsissize-65 ) {
-		document.getElementById("nav-id5").classList.add("active");
-		}else{
-		document.getElementById("nav-id5").classList.remove("active");
-		}
+		
 		
 
 	}
