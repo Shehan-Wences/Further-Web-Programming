@@ -47,7 +47,7 @@
 				  <h2> THE HAPPY PRINCE </h2>
 				  <p>The untold story of the last days in the tragic times of Oscar Wilde, a person who observes his own failure with ironic 
 				  distance and regards the difficulties that beset his life with detachment and humor.</p>
-				  <a href="#" class="button">NOW PLAYING</a>
+				  <a href="#now-showing" class="button">NOW PLAYING</a>
 				  </div>
 			  </div>		  
 			  <img src="../../media/1.jpg"  >
@@ -59,7 +59,7 @@
 				  <h2> AVENGERS ENDGAME </h2>
 				  <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.
 				  With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
-				  <a href="#" class="button">NOW PLAYING</a>
+				  <a href="#now-showing" class="button">NOW PLAYING</a>
 				  </div>
 			  </div>
 			  <img src="../../media/4.jpg" >
@@ -70,7 +70,7 @@
 				  <div>
 				  <h2> THE LION KING </h2>
 				  <p>After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.</p>
-				  <a href="#" class="button">NOW PLAYING</a>
+				  <a href="#now-showing" class="button">NOW PLAYING</a>
 				  </div>
 			  </div>		  
 			  <img src="../../media/2.jpg" >
@@ -82,7 +82,7 @@
 				  <h2> DUMBO </h2>
 				  <p>A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, 
 				  Dumbo and his friends discover dark secrets beneath its shiny veneer.</p>
-				  <a href="#" class="button">NOW PLAYING</a>
+				  <a href="#now-showing" class="button">NOW PLAYING</a>
 				  </div>
 			  </div>
 			  <img src="../../media/3.jpg" >
@@ -111,7 +111,7 @@
 		<div class="tab">
 		  <button class="tablinks active" onclick="aboutfunc(event, 'Abouttab')">About Us</button>
 		  <button class="tablinks" onclick="aboutfunc(event, 'News')">Comfortable Seats</button>
-		  <button class="tablinks" onclick="aboutfunc(event, 'Projectors')">Immersice Experience</button>
+		  <button class="tablinks" onclick="aboutfunc(event, 'Projectors')">Immersive Experience</button>
 		</div>
 		<div id="Abouttab" class="tabcontent" style="display:block;">
 		<div class="flex-headline">
@@ -176,20 +176,153 @@
 		
     </section>
 	<section id='pricing'>
+	<h2 id="price">PRICING</h2>
+	<div class="pricing-flex">
+	  <div class="ticket-flex">
+		  <h2>Standard Adult</h2>
+		  <h3>Monday and Wednesday</h3>
+		  <p>14.00 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>14.00 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>19.80 AUD</p>
+		  <h4>Seat Code : STA</h4>
+	  </div>
+	  <div class="ticket-flex">
+		  <h2>Standard Concession</h2>
+		  <h3>Monday and Wednesday</h3>
+		  <p>12.50 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>12.50 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>17.50 AUD</p>
+		  <h4>Seat Code : STP</h4>
+	  </div>
+	  <div class="ticket-flex">
+		  <h2>Standard Child</h2>
+		  <h3>Monday and Wednesday</h3>
+		  <p>11.00 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>11.00 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>15.30 AUD</p>
+		  <h4>Seat Code : STC</h4>
+	  </div>
+	  <div class="ticket-flex">
+		  <h2>First Class Adult</h2>
+	  	  <h3>Monday and Wednesday</h3>
+		  <p>24.00 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>24.00 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>30.00 AUD</p>
+		  <h4>Seat Code : FCA</h4>
+	  </div>
+	  <div class="ticket-flex">
+		  <h2>First Class Concession</h2>
+	  	  <h3>Monday and Wednesday</h3>
+		  <p>22.50 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>22.50 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>27.00 AUD</p>
+		  <h4>Seat Code : FCP</h4>
+	  </div>
+	  <div class="ticket-flex">
+		  <h2>First Class Child</h2>
+	  	  <h3>Monday and Wednesday</h3>
+		  <p>21.00 AUD</p>
+		  <h3>Weekdays 12pm</h3>
+		  <p>21.00 AUD</p>
+		  <h3>Every Other Time</h3>
+		  <p>24.00 AUD</p>
+		  <h4>Seat Code : FCC</h4>
+	  </div>
+	</div>
      
      </section>
 	<section id='now-showing'>
-     <!--    <img src="/wp-s3757847/media/website-under-construction.png" alt='Website Under Construction' />-->	
+	<h2 id="showing">NOW - SHOWING</h2>
+     <div class="now-flex">
+		  <div class="movie-flex">
+			<img  src="../../media/m1.jpg" >
+			<h2>The Happy Prince (R)</h2>
+			<p>Wednesday - 12pm</p>
+			<p>Thursday - 12pm</p>
+			<p>Friday - 12pm</p>
+			<p>Saturday - 9pm</p>
+			<p>Sunday - 9pm</p>
+		  </div>
+		  <div class="movie-flex">
+			<img  src="../../media/m2.jpg" >
+			<h2>Avengers : Endgame (PG)</h2>
+			<p>Wednesday - 9pm</p>
+			<p>Thursday - 9pm</p>
+			<p>Friday - 9pm</p>
+			<p>Saturday - 6pm</p>
+			<p>Sunday - 6pm</p>
+		  </div>
+		   <div class="movie-flex">
+			<img  src="../../media/m3.jpg" >
+			<h2>Dumbo (G)</h2>
+			<p>Monday - 12pm</p>
+			<p>Tuesday - 12pm</p>
+			<p>Wednesday - 6pm</p>
+			<p>Thursday - 6pm</p>
+			<p>Friday - 6pm</p>
+			<p>Saturday - 12pm</p>
+			<p>Sunday - 12pm</p>
+		  </div>
+		  <div class="movie-flex">
+			<img  src="../../media/m4.jpg" >
+			<h2>Top End Wedding (G)</h2>
+			<p>Monday - 6pm</p>
+			<p>Tuesday - 6pm</p>
+			<p>Saturday - 3pm</p>
+			<p>Sunday - 3pm</p>
+		  </div>
+	  </div>
+    
      </section>
+	 <section id='synopsis'>
+	 <div class="synopsis-container">
+	 <div class="synopsis-description">
+	 <h2>AVENGERS : ENDGAME (PG)</h2>
+	 <p>After half of all life is snapped away by Thanos, the Avengers are left scattered and divided. Now with a way
+	 to reverse the damage, the Avengers and their allies must assemble once more and learn to put differences aside in
+	 order to work together and set things right. Along the way, the Avengers realize that sacrifices must be made as they
+	 prepare for the ultimate final showdown with Thanos, which will result in the heroes fighting the biggest battle they have ever faced.</p>
+	 </div>
+	 <div class="synopsis-trailer">
+	  <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	</div>
+	 <div class="synopsis-booking">
+		<h2>Make a Booking :</h2>
+		<button type="button">Wednesday - 9pm</button>
+		<button type="button">Thursday - 9pm</button>
+		<button type="button">Friday - 9pm</button>
+		<button type="button">Saturday - 6pm</button>
+		<button type="button">Sunday - 6pm</button>
+		
+	 </div>
+	 
+	 </div>
+	 </section>
 	
     </main>
 
     <footer>
-      <div>&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+	<section id="footer1">
+	<div><p>LUNARDO PLC,29 Bulmans Road,Melton South,VIC 3336</p></div>
+	<div><p>lunardo@gmail.com</p></div>
+	<div><p>+61 439 469 582</p></div>
+	</section>
+	<section id="footer2">
+      <div><p>&copy;<script>document.write(new Date().getFullYear());</script><a href="https://github.com/s3757847/wp">  Shehan Chandrasekara - s3757847</a> Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</p></div>
+      <div><p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</p></div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+	 </section>
     </footer>
 	<button onclick="topFunction()" id="goTO" title="Go to top">&#8593;</button>
   </body>
@@ -245,28 +378,28 @@
 		
 		}
 		
-		if (window.pageYOffset >= home-200 && window.pageYOffset < home+homesize-65) {
+		if (window.pageYOffset >= home-200 && window.pageYOffset < home+homesize-30) {
 		document.getElementById("nav-id1").classList.add("active");
 		document.getElementById("mobnav").innerHTML = "&#9776;";
 		}else{
 		document.getElementById("nav-id1").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= about-65 && window.pageYOffset < about+aboutsize-65 ) {
+		if (window.pageYOffset >= about-30 && window.pageYOffset < about+aboutsize-30 ) {
 		document.getElementById("nav-id2").classList.add("active");
 		document.getElementById("mobnav").innerHTML = "ABOUT";
 		}else{
 		document.getElementById("nav-id2").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= pricing-65 && window.pageYOffset < pricing+pricingsize-65 ) {
+		if (window.pageYOffset >= pricing-30 && window.pageYOffset < pricing+pricingsize-30 ) {
 		document.getElementById("nav-id3").classList.add("active");
 		document.getElementById("mobnav").innerHTML = "PRICING";
 		}else{
 		document.getElementById("nav-id3").classList.remove("active");
 		}
 		
-		if (window.pageYOffset >= now-65 && window.pageYOffset < now+nowsize-65 ) {
+		if (window.pageYOffset >= now-30 && window.pageYOffset < now+nowsize-30 ) {
 		document.getElementById("nav-id4").classList.add("active");
 		document.getElementById("mobnav").innerHTML = "NOW SHOWING";
 		}else{

@@ -14,13 +14,14 @@ body
 	scroll-behavior: smooth;
 	margin:0;
 	color: #116466;
-	background: url(../media/backgroundtile.png);
+	background: url(../../media/backgroundtile.png);
 	font-size: 1vw;
 	
 }
 p{
 	line-height:1.6;
 }
+
 
 /*------------Navigation--------------*/
 
@@ -38,6 +39,7 @@ nav{
 }
 #mobnav{
 	display:none;
+	color:white;
 }
 ul {
 	display: inline-block;
@@ -214,7 +216,6 @@ width: 240vh;
 padding-top:0px;
 min-height:100vh;
 height: 100vh;
-background:yellow;
 }
 
 
@@ -329,19 +330,180 @@ transition:0.5s;
 /*------------Pricing--------------*/
 #pricing{
 min-height:100vh;
-height: 700px;
+
 background: url(../../media/hall.jpg);
 background-attachment:fixed;
 background-size: cover;
 background-position: center;
-  background-repeat: no-repeat;
+background-repeat: no-repeat;
+}
+.pricing-flex{
+	padding: 0;
+  padding: 5px 0 15px 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+.ticket-flex {
+	position:relative;
+  background: url(../../media/ticket.png);
+  padding: 5px;
+  width: 175px;
+  height: 350px;
+  margin-top: 20px;
+  bottom:0;
+  
+  font-weight: bold;
+  
+  text-align: center;
+      transition: all ease 0.5s;
+}
+.ticket-flex h2{
+	font-size:17px;
+	margin:0px 5px 5px 5px;
+	padding:10px 0;
+	color: #FFCB9A;
+	background: black;
+}
+.ticket-flex h3{
+	font-size:15px;
+	    margin: 10px;
+		color:#2C3531;
+}
+.ticket-flex h4{
+	font-size:15px;
+		color:red;
+}
+.ticket-flex:hover {
+	background: url(../../media/ticket.jpg);
+	box-shadow: 0px 7px 20px 7px #ffffff;
+  
+  
+  bottom:7px;
+      transition: all ease 0.5s;
+}
+#price {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin: 0;
+	color:white;
 }
 /*------------Now-Showing--------------*/
 #now-showing{
 min-height:100vh;
-height: 800px;
-background:green;
+
+background: url(../media/backgroundtile.png);
 }
+#showing {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin: 0;
+	color:#116466;
+}
+.now-flex{
+	padding: 0;
+  align-items:center;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+.movie-flex {
+	position:relative;
+  background:#00000042;
+  
+  width: 500px;
+  height: 400px;
+  margin-top: 20px;
+  bottom:0;
+      margin: 10px 5px 10px 5px;
+  font-weight: bold;
+  
+  text-align: center;
+      transition: all ease 0.5s;
+}
+.movie-flex img {
+ padding:0;
+ margin:0;
+float:left;
+box-shadow: 0px 0px 4px 4px #00000075;
+
+}
+.movie-flex h2{
+color:#2C3531;
+}
+/*------------Synopsis--------------*/
+
+.synopsis-container{
+background:white;
+margin-top:30px;
+padding:20px;
+	display:flex; 
+	width:100%;
+justify-content: center;
+-webkit-flex-flow: row wrap;
+
+}
+.synopsis-description{
+	padding:10px;
+	width:40%;
+	
+}
+.synopsis-trailer{
+padding:10px;
+	width:40%;
+	
+}
+iframe {
+width: 100%;
+height: 100%;
+}
+.synopsis-booking{
+padding:10px;
+	width:80%;
+	
+}
+/*------------Footer--------------*/
+#footer1{
+	color:white;
+	background:#116466;
+	padding:10px;
+    
+}
+#footer2{
+	color:white;
+	background:#2C3531;
+	padding:10px;
+	    
+}
+#footer2 p{
+	line-height: 1;
+}
+#footer2 a{
+	color:white;
+	text-decoration:none;
+}
+#footer2 a:hover{
+	color:#FFCB9A;
+	text-decoration:none;
+}
+
+
+
+
 
 @media screen and (max-width: 946px) {
 #logo{
@@ -398,7 +560,7 @@ background:green;
 	}
 	/*------------About--------------*/
 	#about{
-	min-height:500px;
+	
 	height: unset;
 	}
 	#who{
@@ -424,13 +586,18 @@ background:green;
 	/*------------Pricing--------------*/
 	#pricing{
 	
-	height: 600px;
+	height: unset;
+	}
+	#price{
+		font-size: 28px;
 	}
 	/*------------Now-Showing--------------*/
 	#now-showing{
-	height: 600px;
+	height: unset;
 	}
-	
+	#showing{
+		font-size: 28px;
+	}
 
 }
 
@@ -556,11 +723,26 @@ background:green;
 	/*------------Pricing--------------*/
 	#pricing{
 	
-	height: 400px;
+	height: unset;
+	}
+	#price{
+		font-size: 17px;
 	}
 	/*------------Now-Showing-------------*/
 	#now-showing{
-	height: 400px;
+	height: unset;
 	}
+	#showing{
+		font-size: 17px;
+	}
+	.synopsis-description{
+	padding:10px;
+	width:80%;
 	
+	}
+	.synopsis-trailer{
+	padding:10px;
+		width:80%;
+		
+	}
 }
