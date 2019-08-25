@@ -14,8 +14,16 @@ body
 	scroll-behavior: smooth;
 	margin:0;
 	color: #116466;
-	background: url(../../media/backgroundtile.png);
+	background: url(../media/backgroundtile.png);
+	font-size: 1vw;
+	
 }
+p{
+	line-height:1.6;
+}
+
+/*------------Navigation--------------*/
+
 nav{
 	z-index:9999;
 	font-size:14px;
@@ -51,11 +59,11 @@ li a:hover {
 	color:#2C3531;
 	transition: all ease 0.5s;
 }
-.active {
-	background:#FFCB9A;
-	box-shadow: -1px 1px 4px 1px #00000075;
-	color:#2C3531;
-	transition: all ease 0.5s;
+li a.active {
+	background:#FFCB9A !important;
+	box-shadow: -1px 1px 4px 1px #00000075 !important;
+	color:#2C3531 !important;
+	transition: all ease 0.5s !important;
 }
 .logo {
 	padding: 5px;
@@ -76,16 +84,18 @@ li a:hover {
   width: 100%;
   box-shadow: -1px 3px 4px 1px #00000075;
 }
-
+#mobnav:hover,:active,:focus{
+	background:transparent;
+	box-shadow:none;
+}
 #logo{
 transition: opacity 0.2s ease-in;
 }
-
 .sticky + .content {
   padding-top: 110px;
 }
 
-
+/*------------Slider--------------*/
 
 .mySlides {
 	display: none
@@ -133,12 +143,10 @@ img {
 	animation-name: fade;
 	animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -158,7 +166,6 @@ img {
     left: 15%;
 	padding: 1vw;
 }
-
 .slidetext h2{
 	color: #FFCB9A;
     font-size: 2vw;
@@ -200,34 +207,141 @@ img {
   padding: 10px 17px;
   border-radius: 4px;
 }
-
+.slideshow-container img {
+width: 240vh;
+}
 #home{
 padding-top:0px;
 min-height:100vh;
 height: 100vh;
+background:yellow;
+}
 
+
+/*------------About--------------*/
+#who{
+	font-size: 2vw;
+	text-align: center;
+	padding-top:60px;
+	padding-bottom:30px;
+	margin:0;
 }
 #about{
-background: url(../media/backgroundtile.png);
+background: url(../../media/backgroundtile.png);
+
 min-height:100vh;
-height: 100vh;
+height: 750px;
 
 }
+.tab {
+    height: 44px;
+    text-align: center;
+}
+.tab button {
+background:#116466;
+font-family: inherit;
+padding: 14px 50px;
+margin: 0px 10px;
+border: none;
+text-decoration: none;
+color: white;
+cursor: pointer;
+box-shadow: -1px 1px 4px 1px #00000075;
+text-align: center;
+transition:0.5s;
+}
+.tab button:hover {
+	color:#2C3531;
+  background-color: #ddd !important;
+  box-shadow: none;
+
+}
+.tab button:focus {
+  outline:0;	
+}
+.tab button.active {
+  color:#2C3531;
+  background-color: #FFCB9A !important;
+  box-shadow: -1px 1px 4px 1px #00000075;
+}
+.tab button:active {
+  color:#2C3531;
+  background-color: #FFCB9A !important;
+}
+.tabcontent {
+  display: none;
+  padding: 20px 20px;
+
+}
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	text-align:justify;
+}
+.flex-container > * {
+	width:33.3%;
+     padding: 0px 26px;
+}
+.flex-container >.chair {
+	width: 30%;
+    height: 25vw;
+	padding: 0;
+	background:#00000042;		
+}
+.chair img{
+	box-shadow: 0px 0px 6px 2px #00000075;
+	width: 100%;
+}
+.chair .title{
+	text-align: center;
+    color:#2C3531;
+}
+.flex-headline{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	text-align:justify;
+	margin-bottom: 12px;
+	
+}
+.flex-headline > * {
+	color:#FFCB9A;
+	width:60%;
+    flex-wrap: wrap;   
+	background:#2c3531ba;	
+	padding:10px;
+	box-shadow: 1px 1px 4px 1px #00000075;
+	text-align:center;
+}
+.aboutPara{
+	width:75%;
+	line-height:1.6;
+	
+} 
+#dolbyimage{
+	width:50%;
+	padding:20px;
+	box-shadow: 1px 1px 4px 1px #00000075;
+}
+
+
+/*------------Pricing--------------*/
 #pricing{
 min-height:100vh;
-height: 800px;
-background:red;
+height: 700px;
+background: url(../../media/hall.jpg);
+background-attachment:fixed;
+background-size: cover;
+background-position: center;
+  background-repeat: no-repeat;
 }
+/*------------Now-Showing--------------*/
 #now-showing{
 min-height:100vh;
 height: 800px;
 background:green;
 }
-.slideshow-container img {
-width: 220vh;
-}
-
-
 
 @media screen and (max-width: 946px) {
 #logo{
@@ -243,40 +357,87 @@ width: 220vh;
 
 }
 @media screen and (max-width: 769px) {
-#logo{
-	display:none;
-}
-#navbar{
-	text-align:center;
-}
-#home{
-	padding-top:0px;
-	min-height:600px;
-	height: 600px;
-	
+	h2 {
+		font-size: 20px;
+		
 	}
-	#about{
-	
-
-	height: 600px;
-	
+	h3 {
+		font-size: 17px;
+		
 	}
-	#pricing{
-	
-	height: 600px;
+	p{
+		font-size: 12px;
 	}
-	#now-showing{
-	height: 600px;
+	/*------------Navigation--------------*/
+	#logo{
+		display:none;
+	}
+	#navbar{
+		text-align:center;
+	}
+	/*------------Slider--------------*/
+	#home{
+		padding-top:0px;
+		min-height:600px;
+		height: 600px;
+		
 	}
 	.slideshow-container img {
 		height: 700px;
 		width: unset;
 	}
+	.slidetext p{
+		font-size:10px;
+	}
+	.slidetext{
+	height: 150px;
+	}
+	.slidetext h2 {
+		font-size: 20px;
+		margin: 3px;
+	}
+	/*------------About--------------*/
+	#about{
+	min-height:500px;
+	height: unset;
+	}
+	#who{
+		font-size: 28px;
+	}
+	.title h3{
+		font-size: 16px;
+		line-height:0.5;
+	}
+	#dolbyimage {
+     width: 60%; 
+    padding: 0px;
+	    margin: 20px;
+	}
+	.flex-container >.chair { 
+		width:65%;
+		height:unset;
+	}
+	.flex-container > *{
+		width:80%;
+		padding:0px;
+	}
+	/*------------Pricing--------------*/
+	#pricing{
+	
+	height: 600px;
+	}
+	/*------------Now-Showing--------------*/
+	#now-showing{
+	height: 600px;
+	}
+	
+
 }
 
 
 @media screen and (max-width: 479px) {
 	
+	/*------------Navigation--------------*/
 	li{
 		display:block;
 		margin: 0;
@@ -284,6 +445,12 @@ width: 220vh;
 	}
 	li a {
 		padding: 3px 50px;
+	}
+	li a:hover {
+		background-color: transparent;
+		box-shadow: none;
+		color:white;
+		transition: all ease 0.5s;
 	}
 	ul{
 		margin:0;
@@ -303,6 +470,8 @@ width: 220vh;
     position: sticky;
     background: #116466;
 	}
+	
+	/*------------Slider--------------*/
 	.slideshow-container{
 		max-height:400px;
 	}
@@ -332,22 +501,66 @@ width: 220vh;
 	height: 400px;
 	
 	}
-	#about{
-	
-
-	height: 400px;
-	
-	}
-	#pricing{
-	
-	height: 400px;
-	}
-	#now-showing{
-	height: 400px;
-	}
 	.slideshow-container img {
 		height: 400px;
 		width: unset;
 	}
-
+	/*------------About--------------*/
+	
+	#about{
+	
+	min-height:900px;
+	height:unset;
+	
+	}
+	
+	.tab button {
+    padding: 9px 8px;
+    margin: 0px 3px;
+	}
+	.tabcontent {
+		padding:0px;
+		font-size: 14px;
+	}
+	#who{
+		font-size: 17px;
+	}
+	.flex-headline{
+		font-size: 17px;
+		    margin-bottom: 0px;
+	}
+	.flex-container > *{
+		width:80%;
+		padding:0px;
+	}
+	.aboutPara {
+		margin-top:0;
+		
+	}
+	.flex-container >.chair { 
+		width:80%;
+		height:unset;
+	}
+	.flex-container{
+	padding-bottom: 15px;
+	}
+	#dolbyimage {
+     width: 100%; 
+    padding: 0px;
+	    margin: 20px;
+	}
+	#dolbypara{
+		width: 100%; 
+		text-align:justify;
+	}
+	/*------------Pricing--------------*/
+	#pricing{
+	
+	height: 400px;
+	}
+	/*------------Now-Showing-------------*/
+	#now-showing{
+	height: 400px;
+	}
+	
 }

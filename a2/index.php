@@ -39,7 +39,7 @@
 	</div>
     <main>
 		
-      <section id='home'>
+    <section id='home'>
 		<div class="slideshow-container">
 			<div class="mySlides fade">
 			  <div class="slidetext">
@@ -103,16 +103,83 @@
 		</div>
 		-->	
       
-     </section>
+    </section>
 	 
 	<section id='about'>
-        
-     </section>
+	
+		<h2 id="who"> WHO ARE WE ..</h2>
+		<div class="tab">
+		  <button class="tablinks active" onclick="aboutfunc(event, 'Abouttab')">About Us</button>
+		  <button class="tablinks" onclick="aboutfunc(event, 'News')">Comfortable Seats</button>
+		  <button class="tablinks" onclick="aboutfunc(event, 'Projectors')">Immersice Experience</button>
+		</div>
+		<div id="Abouttab" class="tabcontent" style="display:block;">
+		<div class="flex-headline">
+		  <h3>BIT OF HISTORY</h3>
+		  </div>
+			<div class="flex-container">
+				<p class="aboutPara">The Lunardo Cinema is steeped in rich history and tradition. Built in 1937 and now Heritage Listed,
+				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
+				<p class="aboutPara">The Lunardo Cinema is steeped in rich history and tradition. Built in 1937 and now Heritage Listed,
+				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
+				<p class="aboutPara">The Lunardo Cinema is steeped in rich history and tradition. Built in 1937 and now Heritage Listed,
+				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
+				
+			</div>
+		</div>
+
+		<div id="News" class="tabcontent">
+		<div class="flex-headline">
+		  <h3>SEATING</h3>
+		 </div>
+		  <div class="flex-container">
+		  <div class="chair">
+		  <img class="imgfix" src="../../media/seat1.png" >
+		  <div class="title"><h3>Standard Seats</h3></div>
+		  </div>
+		  <div>
+			<p>The cinema has reopened after extensive improvements and renovations.We bring the best seats there is to offer along with the best new movies.</p>
+			<p class="seatsinfo">&#10003; Luxurious aesthetic</p>
+			<p class="seatsinfo">&#10003; Fully reclining seat</p>
+			<p class="seatsinfo">&#10003; Two individual motors</p>
+			<p class="seatsinfo">&#10003; Central processor</p>
+			<p class="seatsinfo">&#10003; Footrest sensor option</p>
+			<p class="seatsinfo">&#10003; Easy lift system</p>
+			<p class="seatsinfo">&#10003; Underseat lighting</p>
+			<p class="seatsinfo">&#10003; Autoreturn footrest option</p>
+			</div>
+			<div class="chair">
+			<img class="imgfix" src="../../media/seat2.png" >
+			<div class="title"><h3>First Class Seats</h3></div>
+			</div>
+			</div>
+
+		 
+		</div>
+
+		<div id="Projectors" class="tabcontent">
+		
+		<div class="flex-headline">
+		<h3 >DOLBY VISION</h3>
+		</div>
+		<div class="flex-container">
+		  <img id ="dolbyimage" src="../../media/dolby.jpg" >
+		  <div>
+		  <p >The projection and sound systems are upgraded with 3D Dolby Vision projection and Dolby Atmos.</p>
+		  
+		  <p>Dolby Vision™ was designed for the cinema to deliver incredible color, a million-to-one contrast ratio, and twice the brightness of standard screens.
+		  Powered by dual-laser projection technology and engineered for a consistent experience, Dolby Vision lets you see more of the story.</p>
+		  </div>
+		  
+		  </div>
+		</div>
+		
+    </section>
 	<section id='pricing'>
      
      </section>
 	<section id='now-showing'>
-     <!--    <img src="../../media/website-under-construction.png" alt='Website Under Construction' />-->	
+     <!--    <img src="/wp-s3757847/media/website-under-construction.png" alt='Website Under Construction' />-->	
      </section>
 	
     </main>
@@ -234,6 +301,19 @@
 	  
 	}
 	
+	function aboutfunc(evt, tabname) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(tabname).style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
 
 
 	</script>
