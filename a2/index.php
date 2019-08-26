@@ -41,6 +41,18 @@
 		
     <section id='home'>
 		<div class="slideshow-container">
+
+	<div class="mySlides fade">
+			  <div class="slidetext">
+				  <div>
+				  <h2> AVENGERS ENDGAME </h2>
+				  <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.
+				  With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+				  <a href="#now-showing" class="button">NOW PLAYING</a>
+				  </div>
+			  </div>
+			  <img src="../../media/4.jpg" >
+			</div>
 			<div class="mySlides fade">
 			  <div class="slidetext">
 				  <div>
@@ -53,17 +65,7 @@
 			  <img src="../../media/1.jpg"  >
 			</div>
 			
-			<div class="mySlides fade">
-			  <div class="slidetext">
-				  <div>
-				  <h2> AVENGERS ENDGAME </h2>
-				  <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.
-				  With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
-				  <a href="#now-showing" class="button">NOW PLAYING</a>
-				  </div>
-			  </div>
-			  <img src="../../media/4.jpg" >
-			</div>
+		
 
 			<div class="mySlides fade">
 			  <div class="slidetext">
@@ -122,8 +124,6 @@
 				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
 				<p class="aboutPara">The Lunardo Cinema is steeped in rich history and tradition. Built in 1937 and now Heritage Listed,
 				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
-				<p class="aboutPara">The Lunardo Cinema is steeped in rich history and tradition. Built in 1937 and now Heritage Listed,
-				it is one of the only 2 original Art Deco Cinemas remaining in Sydney.  Family owned, independent, and still offering the lowest price movie tickets around, the cinema has survived a fascinating history of tumultuous change and holds an important place in the local culture.  This heritage and unique design adds to the charm and warmth of the Ritz Cinema that other venues cannot match.</p>
 				
 			</div>
 		</div>
@@ -177,6 +177,8 @@
     </section>
 	<section id='pricing'>
 	<h2 id="price">PRICING</h2>
+	<p id="pricingpara">Lowest Prices for all categories and Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+ Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies </p>
 	<div class="pricing-flex">
 	  <div class="ticket-flex">
 		  <h2>Standard Adult</h2>
@@ -270,7 +272,7 @@
 			<p>Wednesday - 6pm</p>
 			<p>Thursday - 6pm</p>
 			<p>Friday - 6pm</p>
-			<p>Saturday - 12pm</p>
+			
 			<p>Sunday - 12pm</p>
 		  </div>
 		  <div class="movie-flex">
@@ -321,7 +323,7 @@
 	<section id="footer2">
       <div><p>&copy;<script>document.write(new Date().getFullYear());</script><a href="https://github.com/s3757847/wp">  Shehan Chandrasekara - s3757847</a> Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</p></div>
       <div><p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</p></div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      <div><button id='toggleWireframeCSS' style="color:white;" onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 	 </section>
     </footer>
 	<button onclick="topFunction()" id="goTO" title="Go to top">&#8593;</button>
@@ -333,10 +335,10 @@
 	function navShow() {
 		var nav = document.getElementById("mobilenavi");
 		
-		if(nav.style.display=="none"){
-			nav.style.display = "block";
+		if(nav.style.display==='block'){
+			nav.style.display = 'none';
 		}else{
-			nav.style.display = "none";
+			nav.style.display = 'block';
 		}
 	
 	

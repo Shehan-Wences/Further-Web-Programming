@@ -10,21 +10,39 @@ $light-green=#D1E8E2;
 html,
 body
 {
-	font-family: 'Concert One', cursive;
+	
 	scroll-behavior: smooth;
 	margin:0;
 	color: #116466;
 	background: url(../../media/backgroundtile.png);
-	font-size: 1vw;
+	font-size: 16px;
 	
 }
 p{
 	line-height:1.6;
+	font-size: 1.2em;
+	
 }
+h2,h3,h4{
+	font-family: 'Concert One', cursive;
+	font-size: 2em;
+}
+button{
+	line-height:1.6;
+	font-size: 1.2em;
+	border: 3px solid #116466;
+    	background: transparent;
+margin: 5px;
+}
+button:hover{
+	background: #116466;
+	color:white;
 
-
+}
 /*------------Navigation--------------*/
-
+#mobilenavi{
+	display:block;
+}
 nav{
 	z-index:9999;
 	font-size:14px;
@@ -86,10 +104,8 @@ li a.active {
   width: 100%;
   box-shadow: -1px 3px 4px 1px #00000075;
 }
-#mobnav:hover,:active,:focus{
-	background:transparent;
-	box-shadow:none;
-}
+
+
 #logo{
 transition: opacity 0.2s ease-in;
 }
@@ -179,7 +195,7 @@ img {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 1.4em;
 	margin: 1vw 2px 22px 2px;
 	cursor: pointer;
 	outline: 3px solid #FFCB9A;
@@ -231,7 +247,7 @@ height: 100vh;
 background: url(../../media/backgroundtile.png);
 
 min-height:100vh;
-height: 750px;
+
 
 }
 .tab {
@@ -250,6 +266,12 @@ cursor: pointer;
 box-shadow: -1px 1px 4px 1px #00000075;
 text-align: center;
 transition:0.5s;
+}
+.tab:hover{
+	background:transparent;
+}
+.tabcontent:hover{
+	background:transparent;
 }
 .tab button:hover {
 	color:#2C3531;
@@ -283,6 +305,7 @@ transition:0.5s;
 .flex-container > * {
 	width:33.3%;
      padding: 0px 26px;
+	color:#2C3531;
 }
 .flex-container >.chair {
 	width: 30%;
@@ -297,6 +320,7 @@ transition:0.5s;
 .chair .title{
 	text-align: center;
     color:#2C3531;
+line-height:0.5;
 }
 .flex-headline{
 	display: flex;
@@ -352,9 +376,10 @@ background-repeat: no-repeat;
 .ticket-flex {
 	position:relative;
   background: url(../../media/ticket.png);
+  background-size: 100% 100%;
   padding: 5px;
-  width: 175px;
-  height: 350px;
+  width: 275px;
+   height: 450px;
   margin-top: 20px;
   bottom:0;
   
@@ -364,23 +389,24 @@ background-repeat: no-repeat;
       transition: all ease 0.5s;
 }
 .ticket-flex h2{
-	font-size:17px;
+	font-size: 1.4em;
 	margin:0px 5px 5px 5px;
 	padding:10px 0;
 	color: #FFCB9A;
 	background: black;
 }
 .ticket-flex h3{
-	font-size:15px;
+	font-size: 1.4em;
 	    margin: 10px;
 		color:#2C3531;
 }
 .ticket-flex h4{
-	font-size:15px;
+	font-size: 1.2em;
 		color:red;
 }
 .ticket-flex:hover {
 	background: url(../../media/ticket.jpg);
+	background-size: 100% 100%;
 	box-shadow: 0px 7px 20px 7px #ffffff;
   
   
@@ -395,11 +421,16 @@ background-repeat: no-repeat;
     margin: 0;
 	color:white;
 }
+#pricingpara{
+	margin:30px;
+	padding:30px;
+	background:#ffffffd4;
+}
 /*------------Now-Showing--------------*/
 #now-showing{
 min-height:100vh;
 
-background: url(../media/backgroundtile.png);
+background: url(../../media/backgroundtile.png);
 }
 #showing {
     font-size: 2vw;
@@ -444,6 +475,7 @@ box-shadow: 0px 0px 4px 4px #00000075;
 }
 .movie-flex h2{
 color:#2C3531;
+margin: 4px;
 }
 /*------------Synopsis--------------*/
 
@@ -460,6 +492,8 @@ justify-content: center;
 .synopsis-description{
 	padding:10px;
 	width:40%;
+	color:#2C3531;
+	text-align:justify;
 	
 }
 .synopsis-trailer{
@@ -500,7 +534,9 @@ padding:10px;
 	color:#FFCB9A;
 	text-decoration:none;
 }
-
+#mobilenavi{
+	display:block;
+}
 
 
 
@@ -520,15 +556,12 @@ padding:10px;
 }
 @media screen and (max-width: 769px) {
 	h2 {
-		font-size: 20px;
+		font-size:2em;
 		
 	}
-	h3 {
-		font-size: 17px;
-		
-	}
+	
 	p{
-		font-size: 12px;
+		font-size:1.4em;
 	}
 	/*------------Navigation--------------*/
 	#logo{
@@ -549,14 +582,20 @@ padding:10px;
 		width: unset;
 	}
 	.slidetext p{
-		font-size:10px;
+		    font-size: 2em;
 	}
 	.slidetext{
-	height: 150px;
+	height: 250px;
+	top:33%;
 	}
 	.slidetext h2 {
-		font-size: 20px;
+		font-size: 5em;
 		margin: 3px;
+	}
+	.button {
+	
+	font-size: 2.2em;
+	
 	}
 	/*------------About--------------*/
 	#about{
@@ -564,7 +603,7 @@ padding:10px;
 	height: unset;
 	}
 	#who{
-		font-size: 28px;
+		font-size: 3em;
 	}
 	.title h3{
 		font-size: 16px;
@@ -589,26 +628,45 @@ padding:10px;
 	height: unset;
 	}
 	#price{
-		font-size: 28px;
+		font-size: 3em;
 	}
+	
+	.ticket-flex p{
+        font-size: 1.2em;
+    line-height: 1.2;
+	}
+
 	/*------------Now-Showing--------------*/
 	#now-showing{
 	height: unset;
 	}
 	#showing{
-		font-size: 28px;
+		font-size: 3em;
 	}
-
+	.synopsis-description p{
+	
+	text-align:justify;
+	}
 }
 
 
 @media screen and (max-width: 479px) {
-	
+	button {
+    line-height: 1.6;
+    font-size: 0.8em;
+	}
+	p{
+		font-size: 1em;
+		line-height:1;
+	}
+	h2{
+		font-size: 1.4em;
+	}
 	/*------------Navigation--------------*/
 	li{
 		display:block;
 		margin: 0;
-		padding: 10px;
+		padding: 9px;
 	}
 	li a {
 		padding: 3px 50px;
@@ -633,7 +691,7 @@ padding:10px;
 	#mobilenavi{
 	display:none;
 	z-index: 50;
-   
+	
     position: sticky;
     background: #116466;
 	}
@@ -643,20 +701,18 @@ padding:10px;
 		max-height:400px;
 	}
 	.slidetext{
-		height: 75px;
+		height: 100px;
 		
 	}
 	.slidetext p{
 		display: none;
 	}
 	.button {
-	  
-		font-size: 8px;
-		margin: 1px;
-	   
+    font-size: 3em;
+    margin: 9px;
 	}
 	.slidetext h2 {
-		font-size: 17px;
+		font-size: 5em;
 		margin: 3px;
 	}
 	.prev, .next{
@@ -678,6 +734,7 @@ padding:10px;
 	
 	min-height:900px;
 	height:unset;
+		
 	
 	}
 	
@@ -690,7 +747,7 @@ padding:10px;
 		font-size: 14px;
 	}
 	#who{
-		font-size: 17px;
+		    font-size: 2em;
 	}
 	.flex-headline{
 		font-size: 17px;
@@ -699,6 +756,7 @@ padding:10px;
 	.flex-container > *{
 		width:80%;
 		padding:0px;
+		font-size: 1.2em;
 	}
 	.aboutPara {
 		margin-top:0;
@@ -726,23 +784,43 @@ padding:10px;
 	height: unset;
 	}
 	#price{
-		font-size: 17px;
+		    font-size: 2em;
 	}
 	/*------------Now-Showing-------------*/
 	#now-showing{
 	height: unset;
 	}
 	#showing{
-		font-size: 17px;
+		    font-size: 2em;
 	}
 	.synopsis-description{
 	padding:10px;
 	width:80%;
-	
+	    
+	}
+	.synopsis-description p{
+		font-size: 1.2em;
+    line-height: 1.6;
+	text-align:justify;
 	}
 	.synopsis-trailer{
 	padding:10px;
 		width:80%;
 		
+	}
+	.movie-flex {
+	  width:350px;
+	  height:280px;
+	
+	}
+	.movie-flex img {
+	width: 50%;
+	}
+	.ticket-flex p{
+	font-size: 1.3em;
+	}
+	#pricingpara{
+	font-size: 1.2em;
+    line-height: 1.6;
 	}
 }
