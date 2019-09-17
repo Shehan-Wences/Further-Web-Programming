@@ -32,11 +32,17 @@ button{
 	font-size: 1.2em;
 	border: 3px solid #116466;
     	background: transparent;
-margin: 5px;
+	margin: 5px;
+	cursor:pointer;
 }
-button:hover{
+button:hover,:focus{
 	background: #116466;
 	color:white;
+
+}
+button:active{
+	background: #116466 !important;
+	color:white !important;
 
 }
 /*------------Navigation--------------*/
@@ -455,14 +461,14 @@ background: url(../../media/backgroundtile.png);
 .movie-flex {
 	position:relative;
   background:#00000042;
-  cursor:pointer;
+  
   width: 500px;
   height: 400px;
   margin-top: 20px;
   bottom:0;
   margin: 10px 5px 10px 5px;
   font-weight: bold;
-  
+  cursor:pointer;
   text-align: center;
   transition: all ease 0.5s;
 }
@@ -479,10 +485,19 @@ margin: 4px;
 }
 /*------------Synopsis--------------*/
 
+#synopsis-head {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin: 0;
+	background:white;
+	color:#116466;
+}
 .synopsis-container{
 
 background:white;
-margin-top:30px;
+
 padding:20px;
 	display:none; 
 	width:100%;
@@ -510,6 +525,68 @@ height: 100%;
 padding:10px;
 	width:80%;
 	
+}
+
+#booking{
+	  
+	
+	  margin-bottom: 56px;
+}
+
+/*------------Form--------------*/
+
+input{
+  width: 400px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1.5px solid lightgray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  background:white;
+  color:#2C3531;
+}
+select{
+  width: 300px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1.5px solid lightgray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  background:white;
+  color:#2C3531;
+}
+input:focus {
+ 
+  background:white;
+  color:#2C3531;
+}
+select:focus {
+  
+  background:white;
+  color:#2C3531;
+}
+.formwrap{
+	display:flex;
+	-webkit-flex-flow: row wrap;
+    justify-content: center;
+	
+}
+.form-flex{
+	padding:20px;
+}
+
+#order{
+	border: 1.5px solid #116466;
+	cursor:pointer;
+	color:#116466;
+}
+#order:hover{
+	background:#116466;
+	color:white;
 }
 /*------------Footer--------------*/
 #footer1{
@@ -642,6 +719,9 @@ padding:10px;
 	height: unset;
 	}
 	#showing{
+		font-size: 3em;
+	}
+	#synopsis-head{
 		font-size: 3em;
 	}
 	.synopsis-description p{
@@ -823,5 +903,14 @@ padding:10px;
 	#pricingpara{
 	font-size: 1.2em;
     line-height: 1.6;
+	}
+	
+	/*------------Synopsis-------------*/
+	#synopsis-head{
+		    font-size: 2em;
+	}
+	input{
+	  width: 300px;
+	  
 	}
 }

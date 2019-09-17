@@ -95,16 +95,7 @@
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-<!--
-		-->	
-		<!--
-		</div>
-		<div style="text-align:center">
-				  <span class="dot" onclick="currentSlide(1)"></span> 
-				  <span class="dot" onclick="currentSlide(2)"></span> 
-				  <span class="dot" onclick="currentSlide(3)"></span> 
-		</div>
-		-->	
+
       
     </section>
 	 
@@ -247,7 +238,7 @@
 	<section id='now-showing'>
 	<h2 id="showing">NOW - SHOWING</h2>
      <div class="now-flex">
-		  <div id="movieCardDRM" class="movie-flex">
+		  <div id="movieCardAHF" class="movie-flex">
 			<img  src="../../media/m1.jpg" >
 			<h2>The Happy Prince (R)</h2>
 			<p>Wednesday - 12pm</p>
@@ -287,7 +278,8 @@
 	  </div>
     
      </section>
-	 <section id='synopsis'>
+	 <section id='synopsis' style="margin-top:30px;">
+	 <h2 id="synopsis-head" style="display:none;">SYNOPSIS</h2>
 		 <div id="moviePanelACT" class="synopsis-container">
 			 <div class="synopsis-description">
 			 <h2>AVENGERS : ENDGAME (PG)</h2>
@@ -302,11 +294,11 @@
 			</div>
 			 <div class="synopsis-booking">
 				<h2>Make a Booking :</h2>
-				<button type="button">Wednesday - 9pm</button>
-				<button type="button">Thursday - 9pm</button>
-				<button type="button">Friday - 9pm</button>
-				<button type="button">Saturday - 6pm</button>
-				<button type="button">Sunday - 6pm</button>
+				<button onclick="bookingUpdate('ACT','WED','T21','AVENGERS ENDGAME')" type="button">Wednesday - 9pm</button>
+				<button onclick="bookingUpdate('ACT','THU','T21','AVENGERS ENDGAME')" type="button">Thursday - 9pm</button>
+				<button onclick="bookingUpdate('ACT','FRI','T21','AVENGERS ENDGAME')" type="button">Friday - 9pm</button>
+				<button onclick="bookingUpdate('ACT','SAT','T18','AVENGERS ENDGAME')" type="button">Saturday - 6pm</button>
+				<button onclick="bookingUpdate('ACT','SUN','T18','AVENGERS ENDGAME')" type="button">Sunday - 6pm</button>
 				
 			 </div>
 		 
@@ -323,10 +315,10 @@
 			</div>
 			 <div class="synopsis-booking">
 				<h2>Make a Booking :</h2>
-				<button type="button">Monday - 6pm</button>
-				<button type="button">Tuesday - 6pm</button>
-				<button type="button">Saturday - 3pm</button>
-				<button type="button">Sunday - 3pm</button>
+				<button onclick="bookingUpdate('RMC','MON','T18','Top End Wedding')" type="button">Monday - 6pm</button>
+				<button onclick="bookingUpdate('RMC','TUE','T18','Top End Wedding')" type="button">Tuesday - 6pm</button>
+				<button onclick="bookingUpdate('RMC','SAT','T15','Top End Wedding')" type="button">Saturday - 3pm</button>
+				<button onclick="bookingUpdate('RMC','SUN','T15','Top End Wedding')" type="button">Sunday - 3pm</button>
 		
 			
 			 </div>
@@ -346,18 +338,19 @@
 			</div>
 			 <div class="synopsis-booking">
 				<h2>Make a Booking :</h2>
-				<button type="button">Monday - 12pm</button>
-				<button type="button">Tuesday - 12pm</button>
-				<button type="button">Wednesday - 6pm</button>
-				<button type="button">Thursday - 6pm</button>
-				<button type="button">Friday - 6pm</button>
-				<button type="button">Sunday - 12pm</button>
+				<button onclick="bookingUpdate('ANM','MON','T12','Dumbo')"  type="button">Monday - 12pm</button>
+				<button onclick="bookingUpdate('ANM','TUE','T12','Dumbo')"  type="button">Tuesday - 12pm</button>
+				<button onclick="bookingUpdate('ANM','WED','T18','Dumbo')"  type="button">Wednesday - 6pm</button>
+				<button onclick="bookingUpdate('ANM','THU','T18','Dumbo')"  type="button">Thursday - 6pm</button>
+				<button onclick="bookingUpdate('ANM','FRI','T18','Dumbo')"  type="button">Friday - 6pm</button>
+				<button onclick="bookingUpdate('ANM','SAT','T12','Dumbo')"  type="button">Saturday - 12pm</button>
+				<button onclick="bookingUpdate('ANM','SUN','T12','Dumbo')"  type="button">Sunday - 12pm</button>
 				
 			 </div>
 		 
 		 </div>
 		 
-		 <div id="moviePanelDRM" class="synopsis-container">
+		 <div id="moviePanelAHF" class="synopsis-container">
 			 <div class="synopsis-description">
 			 <h2>The Happy Prince (R)</h2>
 			 <p>His body ailing, Oscar Wilde lives out his last days in exile, observing the difficulties and failures surrounding him with ironic detachment,
@@ -369,18 +362,136 @@
 			</div>
 			 <div class="synopsis-booking">
 				<h2>Make a Booking :</h2>
-				<button type="button">Wednesday - 12pm</button>
-				<button type="button">Thursday - 12pm</button>
-				<button type="button">Friday - 12pm</button>
-				<button type="button">Saturday - 9pm</button>
-				<button type="button">Sunday - 9pm</button>
+				<button onclick="bookingUpdate('AHF','WED','T12','The Happy Prince')" type="button">Wednesday - 12pm</button>
+				<button onclick="bookingUpdate('AHF','THU','T12','The Happy Prince')" type="button">Thursday - 12pm</button>
+				<button onclick="bookingUpdate('AHF','FRI','T12','The Happy Prince')" type="button">Friday - 12pm</button>
+				<button onclick="bookingUpdate('AHF','SAT','T21','The Happy Prince')" type="button">Saturday - 9pm</button>
+				<button onclick="bookingUpdate('AHF','SUN','T21','The Happy Prince')" type="button">Sunday - 9pm</button>
 		
 			 </div>
 		 
 		 </div>
 		 
 	 </section>
+	<!-- "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" -->
 	
+	<section id="booking" style="display:none;">
+		<h2 style="text-align:center; padding-top:60px;" id="booking-title">	</h2>
+		<p id="error-message" style="text-align: center; color: red;"></p>
+		<form id="booking-form" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post" target="_blank" onsubmit="return validateForm()">
+		<input type="hidden" name="movie[id]" id="movie-id" >
+		<input type="hidden" name="movie[day]" id="movie-day" >
+		<input type="hidden" name="movie[hour]" id="movie-hour" >
+		<div class="formwrap">
+		<div class="form-flex">
+		STANDARD<br><br>
+		Adults<br>
+		<select name="seats[STA]" id="seats-STA" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select><br>
+		Concession<br>
+		<select  name="seats[STP]" id="seats-STP" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select><br>
+		Child<br>
+		<select name="seats[STC]" id="seats-STC" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select><br><br>
+		FIRST CLASS<br><br>
+		Adults<br>
+		<select name="seats[FCA]" id="seats-FCA" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select><br>
+		Concession<br>
+		<select name="seats[FCP]" id="seats-FCP" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select><br>
+		Child<br>
+		<select name="seats[FCC]" id="seats-FCC" onchange="totalCal()">
+		  <option value="">Please Select</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		</select>
+		</div>
+		<div class="form-flex">
+		<br><br>Customer Name<br>
+		<input type="text" name="cust[name]" id="cust-name" onchange="errorFunc('cust-name')"  ><br>
+		Customer Email<br>
+		<input type="email" name="cust[email]" id="cust-email" onchange="errorFunc('cust-email')"  ><br>
+		Customer Telephone<br>
+		<input type="tel" name="cust[mobile]" id="cust-mobile" onchange="errorFunc('cust-mobile')" ><br>
+		Credit Card<br>
+		<input type="text" name="cust[card]" id="cust-card" onchange="errorFunc('cust-card')" ><br>
+		Credit Card Expiry<br>
+		<input type="month" name="cust[expiry]" id="cust-expiry" onchange="errorFunc('cust-expiry')" ><br>
+		<p id="booking-total">Total : </p>
+		<input id="order" type="submit" name ="order" value="Order">
+		</div>
+		
+		
+		</div>
+
+		</form>
+	</section>
+
     </main>
 
     <footer>
