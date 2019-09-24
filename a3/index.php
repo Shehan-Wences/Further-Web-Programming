@@ -377,7 +377,7 @@
 	
 	<section id="booking" style="display:none;">
 		<h2 style="text-align:center; padding-top:60px;" id="booking-title">	</h2>
-		<p id="error-message" style="text-align: center; color: red;"></p>
+		
 		<form id="booking-form" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post" target="_blank" onsubmit="return validateForm()">
 		<input type="hidden" name="movie[id]" id="movie-id" >
 		<input type="hidden" name="movie[day]" id="movie-day" >
@@ -457,8 +457,8 @@
 		  <option value="10">10</option>
 		</select><br>
 		Child<br>
-		<select name="seats[FCC]" id="seats-FCC" onchange="totalCal()">
-		  <option value="">Please Select</option>
+		<select  name="seats[FCC]" id="seats-FCC" onchange="totalCal()">
+		  <option  value="">Please Select</option>
 		  <option value="1">1</option>
 		  <option value="2">2</option>
 		  <option value="3">3</option>
@@ -470,18 +470,30 @@
 		  <option value="9">9</option>
 		  <option value="10">10</option>
 		</select>
+		<p class="form-error" id="cust-seats"></p>
 		</div>
 		<div class="form-flex">
-		<br><br>Customer Name<br>
-		<input type="text" name="cust[name]" id="cust-name" onchange="errorFunc('cust-name')"  ><br>
-		Customer Email<br>
-		<input type="email" name="cust[email]" id="cust-email" onchange="errorFunc('cust-email')"  ><br>
-		Customer Telephone<br>
-		<input type="tel" name="cust[mobile]" id="cust-mobile" onchange="errorFunc('cust-mobile')" ><br>
-		Credit Card<br>
-		<input type="text" name="cust[card]" id="cust-card" onchange="errorFunc('cust-card')" ><br>
-		Credit Card Expiry<br>
-		<input type="month" name="cust[expiry]" id="cust-expiry" onchange="errorFunc('cust-expiry')" ><br>
+		
+		<label for="cust-name">Customer Name</label><br>
+		<input type="text" name="cust[name]" id="cust-name" onchange="errorFunc('cust-nameerror')"  >
+		<p class="form-error" id="cust-nameerror"></p>
+		<br>
+		<label for="cust-email">Customer Email</label><br>
+		<input type="email" name="cust[email]" id="cust-email" onchange="errorFunc('cust-emailerror')"  >
+		<p class="form-error" id="cust-emailerror"></p>
+		<br>
+		<label for="cust-mobile">Customer Mobile</label><br>
+		<input type="tel" name="cust[mobile]" id="cust-mobile" onchange="errorFunc('cust-mobileerror')" >
+		<p class="form-error" id="cust-mobileerror"></p>
+		<br>
+		<label for="cust-card">Customer Credit Card</label><br>
+		<input type="text" name="cust[card]" id="cust-card" onchange="errorFunc('cust-carderror')" >
+		<p class="form-error" id="cust-carderror"></p>
+		<br>
+		<label for="cust-expiry">Customer Credit Card Expiry</label><br>
+		<input type="month" name="cust[expiry]" id="cust-expiry" onchange="errorFunc('cust-expiryerror')" >
+		<p class="form-error" id="cust-expiryerror"></p>
+		<br>
 		<p id="booking-total">Total : </p>
 		<input id="order" type="submit" name ="order" value="Order">
 		</div>

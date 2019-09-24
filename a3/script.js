@@ -138,13 +138,16 @@
 		else if(time=="T21"){daytime=" - 9pm";}
 		
 		document.getElementById("booking-title").innerHTML = name+daylong+daytime;
-		document.getElementById("booking-form").reset();
+		//document.getElementById("booking-form").reset();
+		//errorclear();
+		
 		document.getElementById("booking-total").innerHTML="Total : ";
 		
 		document.getElementById("movie-id").value=id;
 		document.getElementById("movie-day").value=day;
 		document.getElementById("movie-hour").value=time;
 		document.getElementById("booking").style.display = "block"; 
+		totalCal();
 		document.getElementById("booking").scrollIntoView();
 		
 	}	
@@ -158,6 +161,7 @@
 		document.getElementById("moviePanelANM").style.display = "none"; 
 		document.getElementById("synopsis-head").style.display = "block"; 
 		document.getElementById("booking-form").reset();
+		errorclear();
 		document.getElementById("booking").style.display = "none";
 		document.getElementById("synopsis").scrollIntoView();
 		
@@ -170,6 +174,7 @@
 		document.getElementById("moviePanelANM").style.display = "none"; 
 		document.getElementById("synopsis-head").style.display = "block"; 
 		document.getElementById("booking-form").reset();
+		errorclear();
 		document.getElementById("booking").style.display = "none";
 		document.getElementById("synopsis").scrollIntoView();
     }
@@ -181,6 +186,7 @@
 		document.getElementById("moviePanelANM").style.display = "none"; 
 		document.getElementById("synopsis-head").style.display = "block"; 
 		document.getElementById("booking-form").reset();
+		errorclear();
 		document.getElementById("booking").style.display = "none";
 		document.getElementById("synopsis").scrollIntoView();
     }
@@ -192,6 +198,7 @@
 		document.getElementById("moviePanelANM").style.display = "flex"; 
 		document.getElementById("synopsis-head").style.display = "block"; 
 		document.getElementById("booking-form").reset();
+		errorclear();
 		document.getElementById("booking").style.display = "none";
 		document.getElementById("synopsis").scrollIntoView();
     }
@@ -223,7 +230,7 @@
 		}
 		
 		
-		
+		errorFunc("cust-seats");
 		document.getElementById("booking-total").innerHTML="Total : A$ "+total.toFixed(2);
 		
 	}
@@ -251,46 +258,40 @@
 		
 		
 		var stat=true;
-		var error="";
+		
 	  if(!patternname.test(name)){
-		document.getElementById("cust-name").style.border = "1.5px solid red";
-		error=error+"Please enter a valid Western Name.";
+		document.getElementById("cust-nameerror").innerHTML = "Please enter a valid Western Name.";
 		stat=false;		
 	  }
 	  if(!patternemail.test(email)){
-		  document.getElementById("cust-email").style.border = "1.5px solid red"; 
-		  error=error+"<br />Please enter a valid Email Address.";
-		  stat=false;
+		  document.getElementById("cust-emailerror").innerHTML = "Please enter a valid Email Address."; 
+		stat=false;
 	  }
 	  if(!patternphone.test(mobile)){
-		  document.getElementById("cust-mobile").style.border = "1.5px solid red"; 
-		  error=error+"<br />Please enter a valid 10 digit Oz number.";
+		  document.getElementById("cust-mobileerror").innerHTML = "Please enter a valid 10 digit Oz number."; 
 		  stat=false;
 	  }
 	  if(!patterncard.test(card)){
-		  document.getElementById("cust-card").style.border = "1.5px solid red"; 
-		  error=error+"<br />Please enter a valid Card Number.";
+		  document.getElementById("cust-carderror").innerHTML = "Please enter a valid Card Number."; 
 		  stat=false;
 	  }
 	  if(now.getTime()> new Date(expiry).getTime() || expiry==""){
-		  document.getElementById("cust-expiry").style.border = "1.5px solid red"; 
-		  error=error+"<br />The card you entered is expired";
+		  document.getElementById("cust-expiryerror").innerHTML = "The card you entered is expired"; 
 		  stat=false;
 	  }
 	  if((sta+stp+stc+fca+fcp+fcc)<1){
-		  error=error+"<br />Please Select seats";
+		  document.getElementById("cust-seats").innerHTML = "Please Select seats"; 
 		  stat=false;
+	  }else{
+		    document.getElementById("cust-seats").innerHTML = ""; 
 	  }
 		
 	  
 	  if(stat== false){
 		  
-		  document.getElementById("error-message").innerHTML = error; 
 		   
 		  return false;
 		 
-	  }else{
-		  document.getElementById("error-message").innerHTML = ""; 
 	  }
 	 
 		
@@ -299,6 +300,17 @@
 	}
 	function errorFunc(id){
 		
-		document.getElementById(id).style.border = "1.5px solid lightgray";
+		document.getElementById(id).innerHTML = "";
 		
 	}
+	function errorclear(){
+	
+		document.getElementById("cust-nameerror").innerHTML = "";
+		document.getElementById("cust-emailerror").innerHTML = ""; 
+		document.getElementById("cust-mobileerror").innerHTML = ""; 
+		document.getElementById("cust-carderror").innerHTML = ""; 
+		document.getElementById("cust-expiryerror").innerHTML = ""; 
+		document.getElementById("cust-seats").innerHTML = ""; 
+		 
+	}
+	
