@@ -353,7 +353,7 @@ with the best new movies.</p>
 	
 	<section id="booking" style="display:<?php if(isset($_POST['order'])){echo 'block';}else{echo 'none';} ?>;" >
 		<h2 style="text-align:center; padding-top:60px;" id="booking-title"> <?php echo $bookingtitle; ?></h2>
-		<p class="form-error" style="text-align: center;"><?php echo $hacker; ?></p>
+		<p class="form-error" ><?php echo $hacker; ?></p>
 		<form id="booking-form"  method="post"  onsubmit="return validateForm()">
 		<input type="hidden" name="movie[id]" id="movie-id" value="<?php if(isset($_POST['movie']['id'])){echo $_POST['movie']['id'];} ?>" >
 		<input type="hidden" name="movie[day]" id="movie-day" value="<?php if(isset($_POST['movie']['day'])){echo $_POST['movie']['day'];} ?>">
@@ -362,89 +362,47 @@ with the best new movies.</p>
 		<div class="form-flex">
 		STANDARD<br><br>
 		Adults<br>
-		<select name="seats[STA]" id="seats-STA" onchange="totalCal()">
-		  <option value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select name="seats[STA]" id="seats-STA" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['STA']) && $_POST['seats']['STA'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['STA']) && $_POST['seats']['STA'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select><br>
 		Concession<br>
-		<select  name="seats[STP]" id="seats-STP" onchange="totalCal()">
-		  <option value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select  name="seats[STP]" id="seats-STP" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['STP']) && $_POST['seats']['STP'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['STP']) && $_POST['seats']['STP'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select><br>
 		Child<br>
-		<select name="seats[STC]" id="seats-STC" onchange="totalCal()">
-		  <option value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select name="seats[STC]" id="seats-STC" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['STC']) && $_POST['seats']['STC'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['STC']) && $_POST['seats']['STC'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select><br><br>
 		FIRST CLASS<br><br>
 		Adults<br>
-		<select name="seats[FCA]" id="seats-FCA" onchange="totalCal()">
-		  <option value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select name="seats[FCA]" id="seats-FCA" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['FCA']) && $_POST['seats']['FCA'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['FCA']) && $_POST['seats']['FCA'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select><br>
 		Concession<br>
-		<select name="seats[FCP]" id="seats-FCP" onchange="totalCal()">
-		  <option value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select name="seats[FCP]" id="seats-FCP" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['FCP']) && $_POST['seats']['FCP'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['FCP']) && $_POST['seats']['FCP'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select><br>
 		Child<br>
-		<select  name="seats[FCC]" id="seats-FCC" onchange="totalCal()">
-		  <option  value="">Please Select</option>
-		  <option value="1">1</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5</option>
-		  <option value="6">6</option>
-		  <option value="7">7</option>
-		  <option value="8">8</option>
-		  <option value="9">9</option>
-		  <option value="10">10</option>
+		<select  name="seats[FCC]" id="seats-FCC" onchange="totalCal('clear')">
+		  <option <?php if(isset($_POST['seats']['FCC']) && $_POST['seats']['FCC'] == '') echo ' selected="selected"'; ?> value="">Please Select</option>
+		  <?php foreach(array(1,2,3,4,5,6,7,8,9,10) as $val): ?>
+		  <option <?php if(isset($_POST['seats']['FCC']) && $_POST['seats']['FCC'] == $val) echo ' selected="selected"'; ?> value="<?php echo $val; ?>">
+          <?php echo $val; ?></option><?php endforeach; ?>
 		</select>
 		<p class="form-error" id="cust-seats"><?php echo $seaterror; ?></p>
 		</div>
@@ -452,27 +410,27 @@ with the best new movies.</p>
 		<label for="cust-name">Customer Name</label><br>
 		<input type="text" name="cust[name]" id="cust-name" value="<?php if(isset($_POST['cust']['name'])){echo $_POST['cust']['name'];} ?>"
 		onchange="errorFunc('cust-nameerror')"  >
-		<p class="form-error" id="cust-nameerror"></p>
+		<p class="form-error" id="cust-nameerror"><?php echo $errorcustomername; ?></p>
 		<br>
 		<label for="cust-email">Customer Email</label><br>
 		<input type="email" name="cust[email]" id="cust-email" value="<?php if(isset( $_POST['cust']['email'])){echo $_POST['cust']['email'];} ?>"
 		onchange="errorFunc('cust-emailerror')"  >
-		<p class="form-error" id="cust-emailerror"></p>
+		<p class="form-error" id="cust-emailerror"><?php echo $errorcustomeremail; ?></p>
 		<br>
 		<label for="cust-mobile">Customer Mobile</label><br>
 		<input type="tel" name="cust[mobile]" value="<?php if(isset($_POST['cust']['mobile'])){ echo $_POST['cust']['mobile'];} ?>" id="cust-mobile"
 		onchange="errorFunc('cust-mobileerror')" >
-		<p class="form-error" id="cust-mobileerror"></p>
+		<p class="form-error" id="cust-mobileerror"><?php echo $errorcustomermobile; ?></p>
 		<br>
 		<label for="cust-card">Customer Credit Card</label><br>
 		<input type="text" name="cust[card]" id="cust-card" value="<?php if(isset($_POST['cust']['card'])){echo $_POST['cust']['card'];} ?>"
 		onchange="errorFunc('cust-carderror')" >
-		<p class="form-error" id="cust-carderror"></p>
+		<p class="form-error" id="cust-carderror"><?php echo $errorcustomercard; ?></p>
 		<br>
 		<label for="cust-expiry">Customer Credit Card Expiry</label><br>
 		<input type="month" name="cust[expiry]" id="cust-expiry" value="<?php  if(isset($_POST['cust'])){echo $_POST['cust']['expiry'];} ?>"
 		onchange="errorFunc('cust-expiryerror')" >
-		<p class="form-error" id="cust-expiryerror"></p>
+		<p class="form-error" id="cust-expiryerror"><?php echo $errorcustomerexpiry; ?></p>
 		<br>
 		<p id="booking-total">Total : </p>
 		

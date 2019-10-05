@@ -1,4 +1,7 @@
 	
+	document.addEventListener('DOMContentLoaded', function() {
+		totalCal("no");
+	}, false);
 	document.getElementById("mobnav").onclick = function() {navShow()};
 
 	window.onscroll = function() {myFunction()};
@@ -204,7 +207,7 @@
     }
 	
 	
-	function totalCal() {
+	function totalCal(stat) {
 		var sta = document.getElementById("seats-STA").value;
 		var stp = document.getElementById("seats-STP").value;
 		var stc = document.getElementById("seats-STC").value;
@@ -229,8 +232,9 @@
 			total= sta*19.80+stp*17.50+stc*15.30+fca*30.00+fcp*27.00+fcc*24.00;
 		}
 		
-		
+		if(stat=="clear"){
 		errorFunc("cust-seats");
+		}
 		document.getElementById("booking-total").innerHTML="Total : A$ "+total.toFixed(2);
 		
 	}

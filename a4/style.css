@@ -538,7 +538,7 @@ padding:10px;
 input{
   width: 400px;
   padding: 6px 10px;
-  margin: 8px 0;
+  margin: 8px 0 0 0;
   box-sizing: border-box;
   border: 1.5px solid lightgray;
   -webkit-transition: 0.5s;
@@ -616,8 +616,10 @@ select:focus {
 	display:block;
 }
 .form-error{
+	text-align:center;
 	margin:0;
 	color:red;
+	background:#ffcb9a9e;
 }
 
 
