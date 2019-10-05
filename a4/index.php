@@ -463,7 +463,7 @@ preShow($_SESSION);
 //echo "Why is \n $aaarg \n not working?";
 printMyCode();
 
-$pricesArrayPHP = array(10, 20);
+$pricesArrayPHP = array('10','20','30');
 php2js($pricesArrayPHP, 'pricesArrayJS'); // ie echos javascript equivalent code
 
 ?>
