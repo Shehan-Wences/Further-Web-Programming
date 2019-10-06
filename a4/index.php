@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include 'tools.php';
+include_once 'tools.php';
 
 ?>
 <html lang='en'>
@@ -457,14 +457,15 @@ with the best new movies.</p>
     </footer>
 	<button onclick="topFunction()" id="goTO" title="Go to top">&#8593;</button>
 <?php
+
 preShow($_POST); // ie echo a string
 preShow($_SESSION);
 //$aaarg = preShow($my_bad_array, true); // ie return as a string
 //echo "Why is \n $aaarg \n not working?";
 printMyCode();
 
-$pricesArrayPHP = array('10','20','30');
-php2js($pricesArrayPHP, 'pricesArrayJS'); // ie echos javascript equivalent code
+$pricesArrayPHP = array($movietimes);
+php2js($movietimes, 'movietimesArrayJS'); // ie echos javascript equivalent code
 
 ?>
   </body>

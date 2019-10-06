@@ -13,8 +13,7 @@
 	$errorcustomerexpiry='';
 	$bookingtitle='';
 	$seatnumber_list =  array('1','2','3','4','5','6','7','8','9','10');
-	$day_list =  array('MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN');
-	$hour_list =  array('T12', 'T15', 'T18', 'T21');
+	
 
 	//Seat pricing given in A2
 	$prices = array( 
@@ -238,7 +237,11 @@
 		}
 
 		if ($status) {
-			$_SESSION['cart']=$_POST;
+			
+			$_SESSION['cust']=array_slice($_POST['cust'], 0, 3, true) ;
+			$_SESSION['movie']=$_POST['movie'];
+			$_SESSION['seats']=$_POST['seats'];
+			
 			header("Location: receipt.php");
 		} else {
 						
@@ -269,6 +272,5 @@
 	  echo "  var $arrName = ".json_encode($arr, JSON_PRETTY_PRINT);
 	  echo "</script>\n\n";
 	}
-
 
 ?>

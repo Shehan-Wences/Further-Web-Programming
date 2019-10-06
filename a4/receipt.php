@@ -1,80 +1,65 @@
 <?php
 session_start();
-  if (!isset($_SESSION['cart'])) {
+  if (!isset($_SESSION['cust'])) {
    	header("Location: index.php");
   } else {
 	
-	$date=date('Y-m-d');
-	$name=$_SESSION['cart']['cust']['name'];
-	$email=$_SESSION['cart']['cust']['email'];
-	$mobile=$_SESSION['cart']['cust']['mobile'];
-	$movie=$_SESSION['cart']['movie']['id'];
-	$day=$_SESSION['cart']['movie']['day'];
-	$hour=$_SESSION['cart']['movie']['hour'];
+	$date=date('d/m h:i');
+	$name=$_SESSION['cust']['name'];
+	$email=$_SESSION['cust']['email'];
+	$mobile=$_SESSION['cust']['mobile'];
+	$movie=$_SESSION['movie']['id'];
+	$day=$_SESSION['movie']['day'];
+	$hour=$_SESSION['movie']['hour'];
 	
 	$staPrice=$_SESSION['prices'][$day]['STA'][$hour];
-	if($_SESSION['cart']['seats']['STA']==''){
+	if($_SESSION ['seats']['STA']==''){
 		$staQty=0;
 	}else{
-		$staQty=$_SESSION['cart']['seats']['STA'];
+		$staQty=$_SESSION ['seats']['STA'];
 	}
 	
 	$stpPrice=$_SESSION['prices'][$day]['STP'][$hour];
-	if($_SESSION['cart']['seats']['STP']==''){
+	if($_SESSION['seats']['STP']==''){
 		$stpQty=0;
 	}else{
-		$stpQty=$_SESSION['cart']['seats']['STP'];
+		$stpQty=$_SESSION ['seats']['STP'];
 	}
 	
 	$stcPrice=$_SESSION['prices'][$day]['STC'][$hour];
-	if($_SESSION['cart']['seats']['STC']==''){
+	if($_SESSION ['seats']['STC']==''){
 		$stcQty=0;
 	}else{
-		$stcQty=$_SESSION['cart']['seats']['STC'];
+		$stcQty=$_SESSION ['seats']['STC'];
 	}
 	
 	$fcaPrice=$_SESSION['prices'][$day]['FCA'][$hour];
-	if($_SESSION['cart']['seats']['FCA']==''){
+	if($_SESSION ['seats']['FCA']==''){
 		$fcaQty=0;
 	}else{
-		$fcaQty=$_SESSION['cart']['seats']['FCA'];
+		$fcaQty=$_SESSION ['seats']['FCA'];
 	}
 	
 	$fcpPrice=$_SESSION['prices'][$day]['FCP'][$hour];
-	if($_SESSION['cart']['seats']['FCP']==''){
+	if($_SESSION ['seats']['FCP']==''){
 		$fcpQty=0;
 	}else{
-		$fcpQty=$_SESSION['cart']['seats']['FCP'];
+		$fcpQty=$_SESSION ['seats']['FCP'];
 	}
 	
 	$fccPrice=$_SESSION['prices'][$day]['FCC'][$hour];
-	if($_SESSION['cart']['seats']['FCC']==''){
+	if($_SESSION ['seats']['FCC']==''){
 		$fccQty=0;
 	}else{
-		$fccQty=$_SESSION['cart']['seats']['FCC'];
+		$fccQty=$_SESSION ['seats']['FCC'];
 	}
 	
 	$total=($staPrice*$staQty)+($stpPrice*$stpQty)+($stcPrice*$stcQty)+($fcaPrice*$fcaQty)+($fcpPrice*$fcpQty)+($fccPrice*$fccQty);
-	
-	$bookingfile = fopen("bookings.csv", "a") or die("Unable to open file!");
-	
-	//$txt = "Date\tName\tEmail\tMobile\tMovieID\tDay\tHour\tSTA\tQty\tSTP\tQty\tSTC\tQty\tFCA\tQty\tFCP\tQty\tFCC\tQty\tTotal".PHP_EOL;
-	//fwrite($bookingfile, $txt);
-	//$txt = $date."\t".$name."\t".$email."\t".$mobile."\t".$movie."\t".$day."\t".$hour."\t".$staPrice."\t".$staQty."\t".$stpPrice."\t".$stpQty."\t".$stcPrice."\t".$stcQty."\t".$fcaPrice."\t".$fcaQty."\t".$fcpPrice."\t".$fcpQty."\t".$fccPrice."\t".$fccQty."\t".$total.PHP_EOL;
-	//fwrite($bookingfile, $txt);
-	//$txt =  array("Date","Name","Email","Mobile","MovieID","Day","Hour","STA","Qty","STP","Qty","STC","Qty","FCA","Qty","FCP","Qty","FCC","Qty","Total");
-	//fputcsv($bookingfile, $txt);
-	$txt =  array($date,$name,$email,$mobile,$movie,$day,$hour,$staPrice,$staQty,$stpPrice,$stpQty,$stcPrice,$stcQty,$fcaPrice,$fcaQty,$fcpPrice,$fcpQty,$fccPrice,$fccQty,$total);
-	fputcsv($bookingfile, $txt);
-	
-	
-	
+	$cells = array_merge(  [ $date ], $_SESSION['cust'], $_SESSION['movie'], $_SESSION['seats'] ,(array) $total);
+	$bookingfile = fopen("bookings.txt", "a") or die("Unable to open file!");
+	fputcsv($bookingfile, $cells, "\t");
 	fclose($bookingfile);	
 
-	
-	
-	
-	
   }
 ?>
 <!DOCTYPE html>
