@@ -160,10 +160,11 @@ table td, table th { border: 1px solid black; padding: 5px; }
 	<div id="page-wrap">
 		<h2 id="header">INVOICE</h2>
 		<div id="identity">
-            <p id="address">LUNARDO PLC
-				29 Bulmans Road
-				Melton South,VIC 3336
-				Phone: (+61)  439 469 582
+            <p id="address">LUNARDO PLC<br>
+				29 Bulmans Road<br>
+				Melton South,VIC 3336<br>
+				Phone: (+61)  439 469 582<br>
+				ABN number: 00 123 456 789 <br>
 			</p>
             <div >
               <img id="logo" src="../../media/lunardo-Logo1.png" alt="logo" />
