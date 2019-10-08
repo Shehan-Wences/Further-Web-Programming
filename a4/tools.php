@@ -241,7 +241,7 @@
 			$_SESSION['cust']=array_slice($_POST['cust'], 0, 3, true) ;
 			$_SESSION['movie']=$_POST['movie'];
 			$_SESSION['seats']=$_POST['seats'];
-			
+			$_SESSION['status']="ready";
 			header("Location: receipt.php");
 		} else {
 						

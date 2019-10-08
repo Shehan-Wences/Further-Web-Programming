@@ -457,15 +457,24 @@ with the best new movies.</p>
     </footer>
 	<button onclick="topFunction()" id="goTO" title="Go to top">&#8593;</button>
 <?php
-
-preShow($_POST); // ie echo a string
-preShow($_SESSION);
-//$aaarg = preShow($my_bad_array, true); // ie return as a string
-//echo "Why is \n $aaarg \n not working?";
+echo "-------------------POST-------------------";
+preShow($_POST); 
+if(isset($_SESSION['cust']) && isset($_SESSION['movie']) && isset($_SESSION['seats']) ){
+echo "-------------------SESSION Customer Details-------------------";
+preShow($_SESSION['cust']);
+echo "-------------------SESSION Movie Details-------------------";
+preShow($_SESSION['movie']);
+echo "-------------------SESSION Seat Details-------------------";
+preShow($_SESSION['seats']);
+}else{
+	echo "-------------------SESSION is not set-------------------<br>";
+}
+echo "-------------------Seat Price Details-------------------";
+preShow($prices);
+echo "-------------------Movie Screening Details-------------------";
+preShow($movietimes);
+echo "-------------------index.php Code-------------------";
 printMyCode();
-
-$pricesArrayPHP = array($movietimes);
-php2js($movietimes, 'movietimesArrayJS'); // ie echos javascript equivalent code
 
 ?>
   </body>
